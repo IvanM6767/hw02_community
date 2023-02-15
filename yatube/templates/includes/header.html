@@ -1,0 +1,12 @@
+{% load static %}
+<nav class="navbar navbar-light" style="background-color: lightskyblue">
+  <div class="container">
+    {% if post.group %}
+    <a class="navbar-brand" href="{% url 'post:home_page' %}">
+    {% endif %}
+      <img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      <!-- тег span используется для добавления нужных стилей отдельным участкам текста -->
+      <span style="color:red">Ya</span>tube
+    </a>
+  </div>
+</nav>      
