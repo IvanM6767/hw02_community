@@ -3,7 +3,7 @@ from .models import Post, Group
 
 TEN: int = 10
 
-    
+
 def index(request):
     title = 'Последние обновления на сайте'
     text = 'Последние обновления'
