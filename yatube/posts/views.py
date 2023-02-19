@@ -1,13 +1,13 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Post, Group
 
-TEN: int = 10
+PER_PAGE: int = 10
 
 
 def index(request):
     title = 'Последние обновления на сайте'
     text = 'Последние обновления'
-    posts = Post.objects.all()[:TEN]
+    posts = Post.objects.all()[:PER_PAGE]
     context = {
         'title': title,
         'text': text,
@@ -20,7 +20,7 @@ def group_posts(request, slug):
     title = f"Здесь будет информация о группах проекта Yatube {slug}."
     text = f"Здесь будет информация {slug}."
     group = get_object_or_404(Group, slug=slug)
-    posts = Post.objects.all()[:TEN]
+    posts = Post.objects.all()[:PER_PAGE]
     context = {
         'title': title,
         'text': text,
