@@ -1,9 +1,9 @@
 {% extends 'base.html' %} 
 {% block title %} 
-title
+{{ title }}
 {% endblock %} 
 {% block content %} 
-  <h1>заголовок</h1>
+  <h1>Последние обновления.</h1>
   {% for post in posts %}
     <ul>
       <li>
